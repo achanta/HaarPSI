@@ -17,8 +17,8 @@ or here:
 
 https://github.com/rgcda/haarpsi
 
-The original Python code computes haar gradients that are iaccurate and inefficient. This has
-been fixed in this code. As a result, this version is more accurate, and about 3 times faster.
+The original Python code computes haar gradients that are inaccurate and inefficient. This has
+been fixed in this code. As a result, this version is more accurate, and about 3 times faster (than the CPU version).
 This version of the code is also simpler to understand.
 
 # NOTES:
@@ -27,7 +27,7 @@ This version of the code is also simpler to understand.
 returned may be slightly different from the one obtained from the original code.
 
 [2] The original code limits the gradient computation to 3 scales only. This is the case here
-too. But the code generalizes to a greater number of scales too.
+too. But the code generalizes to a greater number of scales too. For higher scales the returned similarity value may exceed 1 by a little, which is an artifact of the method.
 
-[3] For a rather weak reason (viewing scale), in the original code, every input image is
+[3] For a rather weak reason (namely, viewing scale), in the original code, every input image is
 downsampled by 2 in both dimensions. This is mimicked in this code.
